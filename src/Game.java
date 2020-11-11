@@ -13,15 +13,15 @@ public class Game {
     }
     public static void option() {
     	int position=0;
-    	while (position<=100) {
+    	while (position<100) {
     		int luck=(int)(Math.floor(Math.random()*10)%3+1);
     		int dice=rolls_dice();
     		System.out.println("the dice is "+dice);
-    		System.out.println("the luck is "+luck);
     		switch (luck) {
     		case 1:System.out.println("the position is "+position);
     			break;
     		case 2:	position+=dice;
+    			if(position>100) {position=100;}
     			System.out.println("the position is "+position);
     			break;
     		case 3:position=position-dice;
