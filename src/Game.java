@@ -12,8 +12,9 @@ public class Game {
     	return dice;
     }
     public static void option() {
-    	int position=0;
+    	int position=0,count=0;
     	while (position<100) {
+    		count++;
     		int luck=(int)(Math.floor(Math.random()*10)%3+1);
     		int dice=rolls_dice();
     		System.out.println("the dice is "+dice);
@@ -28,8 +29,9 @@ public class Game {
     			System.out.println("the postition is "+position);
     			if(position<0){position=0;};
     			break;
-    		}	
+    		}
     	}
+    	System.out.println("the number of time dice was played is "+count);
     }
     
 }
