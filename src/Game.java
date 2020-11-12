@@ -21,7 +21,7 @@ public class Game {
     		case 1:System.out.println("the position is "+position);
     			break;
     		case 2:	position+=dice;
-    			if(position>100) {position=100;}
+    			if(position>100) {position=position-dice;}
     			System.out.println("the position is "+position);
     			break;
     		case 3:position=position-dice;
